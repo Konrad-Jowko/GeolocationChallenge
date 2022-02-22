@@ -1,0 +1,41 @@
+@import '../../../styles/global.scss';
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  min-width: 50%;
+  max-width: 75%;
+  padding: 2px;
+
+  .title, .hoverTitle {
+    font-size: 18px;
+    font-family: $header-font-family;
+    text-align: center;
+  }
+
+  .title {
+    opacity: 1;
+  }
+
+  .hoverTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    opacity: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+
+    .title {
+      opacity: 0;
+    }
+    .hoverTitle {
+      opacity: 1;
+    }
+  }
+}

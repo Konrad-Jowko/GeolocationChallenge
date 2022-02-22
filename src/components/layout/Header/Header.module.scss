@@ -1,0 +1,19 @@
+@import '../../../styles/global.scss';
+
+.container {
+  @include noSelect;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+
+  .title, .subTitle {
+    font-size: 35px;
+    font-family: $header-logo-font;
+  }
+
+  .subTitle {
+    font-size: 30px;
+    font-family: $header-font-family;
+  }
+}

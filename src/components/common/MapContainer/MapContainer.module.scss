@@ -1,0 +1,11 @@
+@import '../../../styles/global.scss';
+
+.container {
+  position: absolute;
+  min-width: 48%;
+  height: 82%;
+  object-fit: cover;
+  flex: 2;
+  margin: 10px;
+
+}

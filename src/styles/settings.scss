@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&display=swap');
+
+/* GLOBAL SETTINGS */
+
+// Colors
+
+
+// Fonts & Font sizes
+$logo-font: 'Lobster', cursive;
+$main-font: 'Fjalla One', sans-serif;
+
+// Misc
+
+
+/* COMMON COMPONENTS SETTINGS */
+
+/* FEATURES SETTINGS */
+
+
+/* LAYOUT COMPONENTS SETTINGS */
+// Header
+$header-logo-font: $logo-font;
+$header-font-family: $main-font;
+
+/* VIEWS SETTINGS */
+
+
+/* GLOBAL MIXINS */
+
+@mixin noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin layeredBorder {
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: black 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, black 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, black 20px -20px;
+}

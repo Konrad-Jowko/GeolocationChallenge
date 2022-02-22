@@ -1,0 +1,46 @@
+@import '../../../styles/global.scss';
+
+.container {
+  flex: 1;
+  margin: 0 0 0 auto;
+  padding: 2px;
+  width: 48%;
+
+  .title {
+    padding-top: 35px;
+    margin: 0 auto;
+    max-width: 50%;
+    position: relative;
+    font-size: 18px;
+    font-family: $header-font-family;
+    text-align: center;
+    margin-bottom: 5px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 4px;
+      right: 0;
+      bottom: -5px;
+      left: 0;
+      background: black;
+    }
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .element {
+      font-family: $header-font-family;
+      margin: 0 auto;
+      height: 25px;
+      width: 250px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      gap: 15px;
+
+    }
+  }
+}
