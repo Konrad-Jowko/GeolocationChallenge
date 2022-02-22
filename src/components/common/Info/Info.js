@@ -10,8 +10,9 @@ const Info = ({adressInfo}) => (
     <div className={styles.contentContainer}>
       {adressInfo ? adressInfo.map(element => (
         <div key={element.name} className={styles.element}>
-          <h4 className={element.elementTitle}>{element.name}:</h4>
-          <h4 className={element.elementContent}>{element.content}</h4>
+          <h4 className={styles.elementTitle}>{element.name}:</h4>
+          <h4 className={styles.elementContent}>{element.content}</h4>
+          <div className={styles.copy}> Copy </div>
         </div>
       )) : null}
     </div>

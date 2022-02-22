@@ -36,6 +36,15 @@ $header-font-family: $main-font;
   user-select: none;
 }
 
+@mixin select {
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
 @mixin layeredBorder {
   padding: 10px;
   border: 1px solid black;

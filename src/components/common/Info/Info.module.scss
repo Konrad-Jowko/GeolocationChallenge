@@ -5,6 +5,7 @@
   margin: 0 0 0 auto;
   padding: 2px;
   width: 48%;
+  @include select;
 
   .title {
     padding-top: 35px;
@@ -32,15 +33,41 @@
     flex-flow: column nowrap;
 
     .element {
+      position: relative;
       font-family: $header-font-family;
+      font-size: 16px;
       margin: 0 auto;
-      height: 25px;
-      width: 250px;
+      height: 40px;
+      width: 300px;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
+      align-items: baseline;
       gap: 15px;
 
+      .elementTitle, .elementContent {
+        flex: 2;
+      }
+
+      .copy {
+        flex: 1;
+        background-color: black;
+        color: white;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &:hover {
+        .copy {
+          opacity: 1;
+        }
+      }
     }
   }
 }

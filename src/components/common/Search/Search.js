@@ -6,7 +6,8 @@ import styles from './Search.module.scss';
 /* MAIN LAYOUT COMPONENT */
 const Search = ({content}) => (
   <div className={styles.container}>
-    <h1 className={styles.title}> search </h1>
+    <input className={styles.search} type='text' placeholder='Search information on any URL or IP adress'/>
+    <div className={styles.searchButton}> Search </div>
   </div>
 );
 

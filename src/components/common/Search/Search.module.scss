@@ -1,7 +1,39 @@
 @import '../../../styles/global.scss';
 
 .container {
+  margin: 10px 30px;
   position: relative;
-  margin: 0 auto;
   padding: 2px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 25px;
+
+  .search {
+    padding: 10px;
+    flex: 5;
+    height: 35px;
+    border: 3px solid black;
+    font-family: $header-font-family;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .searchButton {
+    flex: 1;
+    border: 3px solid black;
+    font-family: $header-logo-font;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: white;
+      background: black;
+      cursor: pointer;
+    }
+  }
 }
