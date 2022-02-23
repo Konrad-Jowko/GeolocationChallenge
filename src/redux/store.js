@@ -7,7 +7,7 @@ import { reducer as globalReducer } from './globalRedux';
 
 /* DEFINE REDUCERS */
 const reducers = {
-  global: globalReducer,
+  globalData: globalReducer,
 };
 
 /* ADD BLANK REDUCERS FOR INITIAL STATE PROPERTIES WITHOUT REDUCERS */

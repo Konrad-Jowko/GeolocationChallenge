@@ -5,19 +5,26 @@ import Element from '../../common/Element/Element';
 import styles from './History.module.scss';
 
 /* MAIN LAYOUT COMPONENT */
-const History = ({elements}) => (
+const History = ({elements, getSearch}) => (
   <div className={styles.container}>
     <h2 className={styles.title}> Previously Searched</h2>
     <div className={styles.elementsContainer}>
-      {elements.map(element => (
-        <Element key={element} content={element} />
-      ))}
+      {elements ? elements.map(element => (
+        <Element
+          key={elements.indexOf(element)}
+          content={element}
+          getSearch={getSearch} />
+      ))
+        : null
+      }
     </div>
   </div>
 );
 
+
 History.propTypes = {
   elements: PropTypes.array,
+  getSearch: PropTypes.func,
 };
 
 export default History;

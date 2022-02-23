@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 
 import styles from './Maps.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
-const Maps = ({userAdressInfo, searchedAdressInfo}) => (
+const Maps = ({userAdressInfo, searchedAdressInfo, userGeo, searchedGeo, getSearch}) => (
   <div className={styles.container}>
-    <Adress title='Your IP Information' adressInfo={userAdressInfo}/>
-    <Search />
-    <Adress title='Searched Information' adressInfo={searchedAdressInfo}/>
+    <Adress title='Your IP Information' adressInfo={userAdressInfo} geo={userGeo}/>
+    <Search getSearch={getSearch} />
+    <Adress title='Searched Information' adressInfo={searchedAdressInfo} geo={searchedGeo}/>
   </div>
 );
 
@@ -18,6 +17,9 @@ const Maps = ({userAdressInfo, searchedAdressInfo}) => (
 Maps.propTypes = {
   userAdressInfo: PropTypes.array,
   searchedAdressInfo: PropTypes.array,
+  userGeo: PropTypes.object,
+  searchedGeo: PropTypes.object,
+  getSearch: PropTypes.func,
 };
 
 export default Maps;

@@ -48,7 +48,8 @@
         flex: 2;
       }
 
-      .copy {
+      .copyContainer {
+        position: relative;
         flex: 1;
         background-color: black;
         color: white;
@@ -58,16 +59,52 @@
         justify-content: center;
         opacity: 0;
 
+        .copy, .blend {
+          pointer-events: none;
+          position: absolute;
+          top: 1;
+          right: 1;
+          bottom: 1;
+          left: 1;
+        }
+
+        .blend {
+          display: none;
+        }
+
+        [class*='active'] {
+          display: block;
+        }
+
+        [class*='hidden'] {
+          display: none;
+        }
+
+
         &:hover {
           cursor: pointer;
         }
       }
 
       &:hover {
-        .copy {
+        .copyContainer {
           opacity: 1;
         }
       }
     }
+
+    .noElement {
+      font-family: $header-font-family;
+      text-align: center;
+    }
   }
+
+[class*='active'] {
+  opacity: 1;
+}
+
+[class*='hidden'] {
+  color: red;
+}
+
 }

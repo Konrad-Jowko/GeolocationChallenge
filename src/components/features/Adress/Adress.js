@@ -6,11 +6,11 @@ import Info from '../../common/Info/Info';
 import styles from './Adress.module.scss';
 
 /* MAIN LAYOUT COMPONENT */
-const Adress = ({title, adressInfo}) => (
+const Adress = ({title, adressInfo, geo}) => (
   <div className={styles.container}>
     <h1 className={styles.title}> {title} </h1>
     <div className={styles.detailsContainer}>
-      <MapContainer />
+      <MapContainer geo={geo} />
       <Info adressInfo={adressInfo}/>
     </div>
   </div>
@@ -19,6 +19,7 @@ const Adress = ({title, adressInfo}) => (
 Adress.propTypes = {
   title: PropTypes.string,
   adressInfo: PropTypes.array,
+  geo: PropTypes.object,
 };
 
 export default Adress;

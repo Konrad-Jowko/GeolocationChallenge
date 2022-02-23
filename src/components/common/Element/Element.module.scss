@@ -8,6 +8,7 @@
   padding: 2px;
 
   .title, .hoverTitle {
+    pointer-events: none;
     font-size: 18px;
     font-family: $header-font-family;
     text-align: center;
