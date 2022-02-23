@@ -7,7 +7,6 @@ import styles from './Element.module.scss';
 const Element = ({content, getSearch}) => {
   const manageClick = (event) => {
     const adress = event.target.childNodes[0].innerHTML;
-
     getSearch(adress, true);
   };
 
