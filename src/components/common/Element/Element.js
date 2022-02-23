@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 import styles from './Element.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
+/* COMPONENT PRESENTING ALREADY SEARCH ADRESS*/
 const Element = ({content, getSearch}) => {
   const manageClick = (event) => {
     const adress = event.target.childNodes[0].innerHTML;
+
     getSearch(adress, true);
   };
 
@@ -17,8 +18,6 @@ const Element = ({content, getSearch}) => {
     </div>
   );
 };
-
-
 
 Element.propTypes = {
   content: PropTypes.string,

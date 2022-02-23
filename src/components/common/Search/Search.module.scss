@@ -13,8 +13,8 @@
     padding: 10px;
     flex: 5;
     height: 35px;
-    border: 3px solid black;
-    font-family: $header-font-family;
+    border: 3px solid $search-border-color;
+    font-family: $search-font;
 
     &:focus {
       outline: none;

@@ -5,7 +5,7 @@ import Info from '../../common/Info/Info';
 
 import styles from './Adress.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
+/* COMPONENT CONTAINING ALL USER OR SEARCHED GEOLOCATION  */
 const Adress = ({title, adressInfo, geo}) => (
   <div className={styles.container}>
     <h1 className={styles.title}> {title} </h1>

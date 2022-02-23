@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Alert.module.scss';
 
+/* COMPONENT FOR ALERTING IN CASE OF WRONG SEARCH INPUT */
 const Alert = ({discardAlert}) => (
   <div className={styles.container} onClick={discardAlert}>
     <div className={styles.box}>

@@ -4,15 +4,7 @@
   @include noSelect;
   @include layeredBorder;
   flex: 4;
-  min-height: 85vh;
+  min-height: 89vh;
   display: flex;
   flex-flow: column nowrap;
-
-
-
-  .title {
-    font-size: 25px;
-    font-family: $header-font-family;
-    text-align: center;
-  }
 }

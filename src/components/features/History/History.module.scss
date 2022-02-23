@@ -11,11 +11,16 @@
   overflow: scroll;
   scrollbar-width: none;
 
+  &::-webkit-scrollbar {
+  display: none;
+}
+
   .title {
-    display: box;
+    display: flex;
+    justify-content: center;
     position: relative;
     font-size: 25px;
-    font-family: $header-font-family;
+    font-family: $history-font;
     text-align: center;
 
     &::after {
@@ -25,7 +30,7 @@
       right: 0;
       bottom: -10px;
       left: 0;
-      background: black;
+      background: $history-main-color;
     }
   }
 }

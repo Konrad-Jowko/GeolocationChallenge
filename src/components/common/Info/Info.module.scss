@@ -5,6 +5,7 @@
   margin: 0 0 0 auto;
   padding: 2px;
   width: 48%;
+  font-family: $info-font;
 
   .title {
     padding-top: 35px;
@@ -12,7 +13,6 @@
     max-width: 50%;
     position: relative;
     font-size: 18px;
-    font-family: $header-font-family;
     text-align: center;
     margin-bottom: 5px;
 
@@ -23,7 +23,7 @@
       right: 0;
       bottom: -5px;
       left: 0;
-      background: black;
+      background: $info-main-color;
     }
   }
 
@@ -33,7 +33,6 @@
 
     .element {
       position: relative;
-      font-family: $header-font-family;
       font-size: 16px;
       margin: 0 auto;
       height: 40px;
@@ -50,8 +49,8 @@
       .copyContainer {
         position: relative;
         flex: 1;
-        background-color: black;
-        color: white;
+        background-color: $info-main-color;
+        color: $info-secondary-color;
         height: 25px;
         display: flex;
         align-items: center;
@@ -93,17 +92,7 @@
     }
 
     .noElement {
-      font-family: $header-font-family;
       text-align: center;
     }
   }
-
-[class*='active'] {
-  opacity: 1;
-}
-
-[class*='hidden'] {
-  color: red;
-}
-
 }

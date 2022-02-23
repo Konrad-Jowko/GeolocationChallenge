@@ -10,7 +10,7 @@
   .title, .hoverTitle {
     pointer-events: none;
     font-size: 18px;
-    font-family: $header-font-family;
+    font-family: $element-font;
     text-align: center;
   }
 
@@ -24,13 +24,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    color: white;
+    color: $element-secondary-color;
     opacity: 0;
   }
 
   &:hover {
     cursor: pointer;
-    background-color: black;
+    background-color: $element-main-color;
 
     .title {
       opacity: 0;

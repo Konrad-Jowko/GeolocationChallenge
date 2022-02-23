@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 
 import styles from './Search.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
+/* COMPONENT WITH FORM FOR PUTTING ADRESSES TO SEND THEM TO API */
 const Search = ({getSearch}) => {
   const manageInput = () => {
     const search = document.getElementById('searchInput');
-
     if (search.value) {
       getSearch(search.value, false);
     }
@@ -26,7 +25,6 @@ const Search = ({getSearch}) => {
     </div>
   );
 };
-
 
 Search.propTypes = {
   content: PropTypes.string,

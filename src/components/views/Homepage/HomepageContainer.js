@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import MainLayout from './MainLayout';
+import Homepage from './Homepage';
 import { getGlobal, getUser, getSearch, discardAlert} from '../../../redux/globalRedux';
 
 const mapStateToProps = (state) => ({
@@ -12,4 +12,4 @@ const mapDispatchToProps = (dispatch) => ({
   discardAlert: () => dispatch(discardAlert()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MainLayout);
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

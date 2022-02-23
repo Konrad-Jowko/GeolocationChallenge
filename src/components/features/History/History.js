@@ -4,7 +4,7 @@ import Element from '../../common/Element/Element';
 
 import styles from './History.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
+/* COMPONENT PRESENTING ALL ALREADY SEARCHED ADRESSES */
 const History = ({elements, getSearch}) => (
   <div className={styles.container}>
     <h2 className={styles.title}> Previously Searched</h2>
@@ -20,7 +20,6 @@ const History = ({elements, getSearch}) => (
     </div>
   </div>
 );
-
 
 History.propTypes = {
   elements: PropTypes.array,

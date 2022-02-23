@@ -1,39 +1,36 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import { REACT_APP_GOOGLE } from '../../../API';
 import PropTypes from 'prop-types';
 
 import styles from './MapContainer.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
-const MapContainer = ({content, geo}) => {
-  let latitude, longitude;
-
-  if (geo) {
-    latitude = geo.latitude;
-    longitude = geo.longitude;
+/* COMPONENT RENDERING MAPS WITH GEOLOCATION INFO ACQUIRED FROM API */
+const MapContainer = ({geo}) => {
+  if (geo !== undefined) {
+    return (
+      <div className={styles.container}>
+        <Map
+          google={window.google}
+          zoom={11}
+          style={{width: '100%', height: '100%'}}
+          initialCenter={{ lat: geo.latitude, lng: geo.longitude}}
+          center={{ lat: geo.latitude, lng: geo.longitude}}
+          mapTypeId= 'google.maps.MapTypeId.ROADMAP'
+          streetViewControl={false}
+          disableDefaultUI= {true}
+        >
+          {geo ? <Marker position={{ lat: geo.latitude, lng: geo.longitude}} /> : null}
+        </Map>
+      </div>
+    );
   } else {
-    latitude = 52.15193176269531;
-    longitude = 21.059459686279297;
+    return (
+      <div className={styles.container}>
+        <div className={styles.placeholder}> Please search for URL or IP adress to display it&apos;s location </div>
+      </div>
+    );
   }
-
-  return (
-    <div className={styles.container}>
-      <Map
-        google={window.google}
-        zoom={12}
-        style={{width: '100%', height: '100%'}}
-        center={{ lat: latitude, lng: longitude}}
-        mapTypeId= 'google.maps.MapTypeId.ROADMAP'
-        streetViewControl={false}
-        disableDefaultUI= {true}
-      >
-        {geo ? <Marker position={{ lat: geo.latitude, lng: geo.longitude}} /> : null}
-      </Map>
-    </div>
-  );
 };
-
 
 MapContainer.propTypes = {
   content: PropTypes.string,
@@ -41,5 +38,5 @@ MapContainer.propTypes = {
 };
 
 export default GoogleApiWrapper({
-  apiKey: REACT_APP_GOOGLE,
+  apiKey: process.env.REACT_APP_GOOGLE,
 })(MapContainer);

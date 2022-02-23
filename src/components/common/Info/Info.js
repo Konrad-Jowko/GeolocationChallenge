@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Info.module.scss';
 
-/* MAIN LAYOUT COMPONENT */
+/* COMPONENT PRESENTING GEOLOCATION INFO ACQUIRED FROM API */
 const Info = ({adressInfo}) => {
   const manageClick = (event) => {
     const children = event.target.childNodes;
@@ -40,8 +40,6 @@ const Info = ({adressInfo}) => {
     </div>
   );
 };
-
-
 
 Info.propTypes = {
   adressInfo: PropTypes.array,

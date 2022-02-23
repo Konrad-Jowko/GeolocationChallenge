@@ -1,29 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&display=swap');
 
 /* GLOBAL SETTINGS */
-
 // Colors
-
+$color-main: #000;
+$color-background: #fff;
 
 // Fonts & Font sizes
-$logo-font: 'Lobster', cursive;
+$cursive-font: 'Lobster', cursive;
 $main-font: 'Fjalla One', sans-serif;
 
-// Misc
-
-
 /* COMMON COMPONENTS SETTINGS */
+// Element
+$element-font: $main-font;
+$element-main-color: $color-main;
+$element-secondary-color: $color-background;
+
+// Info
+$info-font: $main-font;
+$info-main-color: $color-main;
+$info-secondary-color: $color-background;
+
+// MapContainer
+$map-font: $main-font;
+$map-border-color: $color-main;
+
+// Search
+$search-font: $main-font;
+$search-border-color: $color-main;
 
 /* FEATURES SETTINGS */
+// Adress
+$adress-header-font: $main-font;
+$adress-main-color: $color-main;
 
+//Alert
+$alert-font: $main-font;
+$alert-container-background-color: rgba(255,255,255, .7);
+$alert-box-background-color: $color-background;
+$alert-main-color: $color-main;
+
+//History
+$history-font: $main-font;
+$history-main-color: $color-main;
 
 /* LAYOUT COMPONENTS SETTINGS */
 // Header
-$header-logo-font: $logo-font;
+$header-logo-font: $cursive-font;
 $header-font-family: $main-font;
-
-/* VIEWS SETTINGS */
-
 
 /* GLOBAL MIXINS */
 
@@ -37,7 +60,7 @@ $header-font-family: $main-font;
 }
 
 @mixin button {
-  border: 3px solid black;
+  border: 3px solid $color-main;
   font-family: $header-logo-font;
   font-size: 25px;
   display: flex;
@@ -45,14 +68,14 @@ $header-font-family: $main-font;
   justify-content: center;
 
   &:hover {
-    color: white;
-    background: black;
+    color: $color-background;
+    background: $color-main;
     cursor: pointer;
   }
 }
 
 @mixin layeredBorder {
   padding: 10px;
-  border: 1px solid black;
-  box-shadow: black 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, black 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, black 20px -20px;
+  border: 1px solid $color-main;
+  box-shadow: $color-main 0px 0px 0px 2px inset, $color-background 10px -10px 0px -3px, $color-main 10px -10px, $color-background 20px -20px 0px -3px, $color-main 20px -20px;
 }
